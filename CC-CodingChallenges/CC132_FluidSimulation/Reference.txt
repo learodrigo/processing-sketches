@@ -1,0 +1,8 @@
+Episode https://www.youtube.com/watch?v=alhpH6ECFvQ
+Github Thread https://github.com/CodingTrain/Rainbow-Topics/issues/178
+Real-Time Fluid Dynamics for Games by Jos Stam https://www.dgp.toronto.edu/people/stam/reality/Research/pdf/GDC03.pdf
+MSAFluid https://www.memo.tv/works/msafluid/
+Lily Pad https://github.com/weymouth/lily-pad
+Fluid Simulation for Dummies by Mike Ash https://mikeash.com/pyblog/fluid-simulation-for-dummies.html
+Why Laminar Flow is AWESOME - Smarter Every Day 208 https://www.youtube.com/watch?v=y7Hyc3MRKno
+What DO we know about turbulence? by 3Blue1Brown https://www.youtube.com/watch?v=_UoTTq651dE

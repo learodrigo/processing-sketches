@@ -4,9 +4,9 @@ int cpt;
 int b;
 
 void setup () {
-  size(600, 600);
+  fullScreen();
   background(0);
-  img = loadImage("aurora.jpg");
+  img = loadImage("selfie.jpg");
   img.resize(width, height);
   cr = new int[height];
   b = 80;
@@ -30,7 +30,7 @@ void draw () {
 
   updatePixels();
   image(img, 0, 0);
-  save("aurora.jpg");
+  save("selfie-modified.jpg");
 }
 
 int[] sort_color (int cr[]) {
