@@ -1,3 +1,18 @@
+/*
+🔗 Marching cubes: A high resolution 3D surface construction algorithm by William E. Lorensen and Harvey E. Cline: https://citeseerx.ist.psu.edu/viewdoc...
+🔗 Metaballs and Marching Squares by Jamie Wong: http://jamie-wong.com/2014/08/19/meta...
+🔗 Marching squares : https://en.wikipedia.org/wiki/Marchin...
+🔗 OpenSimplexNoise-for-Processing (GitHub Repo): https://github.com/CodingTrain/OpenSi...
+🔗 Open Simplex Noise in Java:  https://gist.github.com/KdotJPG/b1270...
+
+🎥 Coding Adventure: Marching Cubes: https://youtu.be/M3iI2l0ltbE
+🎥 [Unity] Procedural Cave Generation (E02. Marching Squares): https://youtu.be/yOgIncKp0BE
+🎥 Coding Challenge #28 - Metaballs: https://youtu.be/ccYLb7cLB1I
+🎥 What is OpenSimplex Noise?: https://youtu.be/Lv9gyZZJPE0
+🎥 Coding in the Cabana #4 - Worley Noise: https://youtu.be/4066MndcyCk
+🎥 2D Noise - Perlin Noise and p5.js Tutorial: https://youtu.be/ikwNrFvnL3g
+*/
+
 float[][] field;
 int rez = 5 ;
 int cols, rows;
