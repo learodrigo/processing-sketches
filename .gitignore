@@ -2,3 +2,6 @@ lastrea_/vasarely
 */.vscode
 */*/.vscode
 /libraries
+/modes
+/templates
+/tools
