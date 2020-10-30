@@ -1,7 +1,15 @@
 lastrea_/vasarely
 */.vscode
 */*/.vscode
+
 /libraries
 /modes
 /templates
 /tools
+
+examples/coding-creative-examples/
+examples/gswp_2e/
+examples/handbook_2e/
+examples/learningprocessing2/
+examples/natureofcode/
+examples/rosetta_examples_p5/
