@@ -1,6 +1,7 @@
 lastrea_/vasarely
 */.vscode
 */*/.vscode
+.idea/
 
 /libraries
 /modes
