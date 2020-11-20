@@ -3,6 +3,13 @@ lastrea_/vasarely
 */*/.vscode
 .idea/
 
+*.mp4
+*/*.mp4
+*/*/*.mp4
+*/*/*/*.mp4
+*/*/*/*/*.mp4
+*/*/*/*/*/*.mp4
+
 /libraries
 /modes
 /templates
