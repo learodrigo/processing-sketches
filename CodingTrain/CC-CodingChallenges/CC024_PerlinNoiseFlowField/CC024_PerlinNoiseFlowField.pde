@@ -1,6 +1,6 @@
 int cols, rows;
 
-float inc = 0.1;
+float inc = 0.05;
 float zoff = 0.0;
 
 int scl = 20;
@@ -17,7 +17,7 @@ void setup() {
   cols = floor(width / scl);
   rows = floor(height / scl);
 
-  for (int i = 0; i < 100000; i++) {
+  for (int i = 0; i < 10000; i++) {
     particles.add(new Particle());
   }
   
@@ -25,7 +25,7 @@ void setup() {
 }
 
 void draw() {
-  background(0, 5);
+  //background(0, 5);
 
   float yoff = 0;
   for(int y = 0; y < rows; y++) {
@@ -53,7 +53,7 @@ void draw() {
     }
 
     yoff += inc;
-    zoff += 0.00003;
+    zoff += 0.004;
   }
 
   for (Particle p : particles) {
