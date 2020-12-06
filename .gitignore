@@ -1,14 +1,9 @@
 lastrea_/vasarely
-*/.vscode
-*/*/.vscode
-.idea/
 
-*.mp4
-*/*.mp4
-*/*/*.mp4
-*/*/*/*.mp4
-*/*/*/*/*.mp4
-*/*/*/*/*/*.mp4
+**.vscode
+.idea/
+**.mp4
+**/ffmpeg.txt
 
 /libraries
 /modes

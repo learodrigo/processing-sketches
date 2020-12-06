@@ -1,4 +1,4 @@
-boolean r = true;
+boolean r = false;
 
 void setup () {
   size(900, 900, P2D);
