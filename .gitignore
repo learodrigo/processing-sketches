@@ -3,6 +3,7 @@ lastrea_/vasarely
 **.vscode
 .idea/
 **.mp4
+**.png
 **/ffmpeg.txt
 
 /libraries
