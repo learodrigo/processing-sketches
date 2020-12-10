@@ -12,7 +12,7 @@ void setup () {
   println("Y mouse axis controls shape's ratio and stroke weight");
   println("X mouse axis controls shape's random position");
   println("Space bar or click to re draw");
-  println("B to hide grid");
+  println("B to hide/show grid");
 }
 
 float shiftPos (int ratio) {
