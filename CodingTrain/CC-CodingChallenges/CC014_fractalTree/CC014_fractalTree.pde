@@ -1,6 +1,6 @@
 float angle = 0.0;
 float counter = 0.0;
-boolean rec = false;
+boolean rec = true;
 
 void setup() {
   size(1800, 900);

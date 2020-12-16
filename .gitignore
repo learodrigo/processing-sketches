@@ -1,7 +1,10 @@
 lastrea_/vasarely
-*/.vscode
-*/*/.vscode
+
+**.vscode
 .idea/
+**.mp4
+**.png
+**/ffmpeg.txt
 
 /libraries
 /modes
@@ -14,3 +17,4 @@ examples/handbook_2e/
 examples/learningprocessing2/
 examples/natureofcode/
 examples/rosetta_examples_p5/
+examples/GenerativeDesign/GenerativeDesignBookExamples
