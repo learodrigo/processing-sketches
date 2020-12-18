@@ -1,5 +1,5 @@
 int
-  currentCount = 5, 
+  currentCount = 10, 
   margin = 100, 
   maxCount = currentCount * 200;
 
@@ -81,10 +81,13 @@ void draw () {
 
   //if (frameCount % 5 == 0) {
     noFill();
-    stroke(255, 100);
+    stroke(10, 255, 50, 10);
     strokeWeight(2);
   //}
 
+  fill(10, 255, 50, 10);
+  polygon(x[i], y[i], r[i] * 9, (int) random(7, 9));
+  noFill();
   circle(x[i], y[i], r[i] * 4);
   circle(x[i], y[i], r[i] * 3);
   circle(x[i], y[i], r[i] * 2);
@@ -94,7 +97,6 @@ void draw () {
   stroke(255, 50);
   polygon(x[i], y[i], r[i] * 7, (int) random(6, 8));
   stroke(255, 40);
-  polygon(x[i], y[i], r[i] * 9, (int) random(7, 9));
 
   if (currentCount >= maxCount) {
     println("Limit reached: " + maxCount);
@@ -104,7 +106,7 @@ void draw () {
 
 void showHistoryPath (float _x, float _y, float _r, int inx) {
   noFill();
-  stroke(255);
+  stroke(10, 255, 50);
   strokeWeight(0.1);
   circle(_x, _y, _r * 2);
   line(_x, _y, x[inx], y[inx]);
