@@ -8,7 +8,7 @@ int dim = 5;
 // Raised size
 int AS = sSize / dim;
 // CA data
-boolean [][][] CA;
+boolean[][][] CA;
 // Keep track of z for layering
 int z = 0;
 
