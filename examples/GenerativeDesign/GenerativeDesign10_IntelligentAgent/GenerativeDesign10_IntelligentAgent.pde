@@ -104,8 +104,12 @@ void keyReleased () {
   if (key == ' ') {
     background(0);
   }
+  if (key == 's') {
+    saveFrame("intelligentAgent-" + frameCount + ".png");
+  }
 }
 
 void mouseReleased () {
   showLines = !showLines;
+  println("Show lines? " + showLines);
 }
