@@ -73,7 +73,7 @@ void draw () {
   for (int i = 0; i < currentCount; i++) {
     noFill();
     stroke(255, 10);
-    strokeWeight(1);
+    strokeWeight(2);
     circle(x[i], y[i], r[i] * 2);
 
     rotate(HALF_PI);
@@ -81,11 +81,11 @@ void draw () {
     //  fill(255, 1);
     //  stroke(255, 1);
     //}
-    strokeWeight(2);
+    strokeWeight(0.5);
     rect(x[i], y[i], r[i], r[i]);
 
     int n = closestIndex[i];
-    strokeWeight(0.5);
+    strokeWeight(6);
     line(x[i], y[i], x[n], y[n]);
   }
 
