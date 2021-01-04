@@ -1,10 +1,10 @@
-int cols, rows, scl = 5;
+int cols, rows, scl = 2;
 float[][] grid, terrain;
 float offset = 0.01;
 PImage heightmap;
 
 void setup () {
-  size(1200, 1200, P3D);
+  size(900, 900, P3D);
   fill(255);
   noStroke();
 
@@ -20,17 +20,16 @@ void setup () {
 void draw () {
   background(0);
   lights();
-
-  translate(width / 2, height / 2);
-  rotateX(PI / 8);
-  translate(-width / 2, -height / 2);
-  translate(0, -100);
+  
+  rotateX(0.4);
+  translate(0, 0, 150);
+  
   
   for (int y = 0; y < cols; y++) {
     for (int x = 0; x < rows; x++) {
       int index = x * scl + y * scl * heightmap.width;
       color pix = heightmap.pixels[index];
-      float oldG = red(pix);
+      float oldG = blue(pix);
       terrain[x][y] = map(oldG, 0, 255, -50, 100);
     }
   }
@@ -38,6 +37,8 @@ void draw () {
   for (int y = 0; y < cols - 1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (int x = 0; x < rows; x++) {
+      float b = map(terrain[x][y], -50, 100, 255, 0);
+      fill(b);
       vertex(x * scl, (y + 0) * scl, terrain[x][y]);
       vertex(x * scl, (y + 1) * scl, terrain[x][y+1]);
     }
@@ -56,6 +57,7 @@ void pickRandomHeightmap (boolean show) {
 
   if (show) {
     redraw();
+    //saveFrame("heightmap-" + frameCount + ".png");
   }
 }
 
