@@ -23,3 +23,9 @@ void setup () {
     noiseMax += 0.03;
   }
 }
+
+void keyPressed () {
+  if (key == ' ') {
+    redraw();
+  }
+}
