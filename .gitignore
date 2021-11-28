@@ -20,3 +20,5 @@ examples/rosetta_examples_p5/
 examples/GenerativeDesign/GenerativeDesignBookExamples
 
 **/out
+
+**.DS_Store
