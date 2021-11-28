@@ -3,7 +3,6 @@ color fg = #ff0000;
 
 void setup () {
   size(900, 900);
-  //frameRate(5);
 }
 
 void draw () {
