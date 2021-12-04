@@ -1,4 +1,5 @@
 import processing.video.*;
+import java.time.LocalDateTime;
 
 Capture cam;
 
@@ -8,9 +9,11 @@ int y = 0;
 float angle = 0;
 int offset = 0;
 
+PImage sliceCircular;
 PImage slice;
 PImage[] slices;
 int sliceIndex = 0;
+
 PImage[] history;
 int historyIndex = 0;
 
@@ -21,7 +24,7 @@ void setup () {
   String[] cameras = Capture.list();
   cam = new Capture(this, cameras[0]);
 
-  //slice = createImage(w, height, RGB);
+  sliceCircular = createImage(w, height, RGB);
   slice = createImage(width, h, RGB);
   slices = new PImage[height / h];
   history = new PImage[height / h];
@@ -34,6 +37,7 @@ void setup () {
   }
 
   cam.start();
+
   background(0);
 }
 
@@ -44,27 +48,17 @@ void captureEvent(Capture cam) {
 }
 
 void runCamera() {
-  //slice.copy(cam, width / 2 - w / 2, 0, w, height, 0, 0, w, height);
-
   // Cirular stripes
-  //translate(width / 2, height / 2);
-  //rotate(angle);
-  //image(slice, 0, 0);
-
-  //angle += 0.01;
-
-  ////println("angle", angle);
-  ////println("round angle", round(angle));
-
-  //if (angle == 6) {
-  //  println("angle", angle);
-  //}
+  // sliceCircular.copy(cam, width / 2 - w / 2, 0, w, height, 0, 0, w, height);
+  // translate(width / 2, height / 2);
+  // rotate(angle);
+  // image(sliceCircular, 0, 0);
+  // angle += 0.01;
 
   // Top to bottom horizontal stripes
   //slice.copy(cam, 0, height / 2 - h / 2, width, h, 0, 0, width, h);
   //image(slice, 0, y);
-
-  //y++;
+  //y += (1 % height);
 
   // Bottom to top horizontal stripes
   // Here we implement an array from the previous example
@@ -79,13 +73,13 @@ void runCamera() {
   //offset++;
 
   // Bottom to top horizontal stripes
-  for (int i = 0; i < history.length; i++) {
-    int y = i * h;
-    int currentIndex = (i + offset) % history.length;
-    copy(history[currentIndex], 0, y, width, h, 0, y, width, h);
-  }
+  //for (int i = 0; i < history.length; i++) {
+  //  int y = i * h;
+  //  int currentIndex = (i + offset) % history.length;
+  //  copy(history[currentIndex], 0, y, width, h, 0, y, width, h);
+  //}
 
-  offset++;
+  //offset++;
 }
 
 void draw () {
@@ -93,7 +87,9 @@ void draw () {
 
   if (keyPressed) {
     if (key == 's') {
-      saveFrame("exports/Bending-time-slitscan####.png");
+      LocalDateTime now = LocalDateTime.now();
+
+      saveFrame("exports/"+ now.toString() +"Bending-time-slitscan####.png");
       print("Image Saved!");
     }
   }
