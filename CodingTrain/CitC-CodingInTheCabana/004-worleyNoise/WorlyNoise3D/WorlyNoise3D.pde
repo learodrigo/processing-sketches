@@ -4,7 +4,7 @@
  *
  * TODO: Add QuadTree
  */
- 
+
 PVector[] features;
 float angle = 0;
 
@@ -15,10 +15,10 @@ void setup() {
 
   for (int i = 0; i < features.length; i++) {
     features[i] = new PVector(
-      random(width), 
-      random(height), 
+      random(width),
+      random(height),
       random(-width/2, width/2)
-      );
+    );
   }
 }
 
@@ -34,29 +34,32 @@ void draw() {
         for (int i = 0; i < distances.length; i++) {
           // 3D Features points
           float depth = sin(angle) * (width / 2);
+          PVector v = features[i];
           distances[i] = dist(x, y, depth, v.x, v.y, v.z);
         }
 
         distances = sort(distances);
-        int n = 0;
+
         // Grayscale
+        int n = 0;
         float d = distances[n];
         float b = map(d, 0, width / 4, 255, 0);
 
         // Color
-        //float d0 = distances[0];
-        //float d1 = distances[1];
-        //float d2 = distances[2];
-        //float r = map(d1, 0, width / 4, 255, 20) * 2;
-        //float g = map(d2, 0, width / 4, 255, 20) * 2;
-        //float b = map(d0, 0, width / 4, 255, 20) * 2;
-        //pixels[index] = color(r, g, b);
+        // float d0 = distances[0];
+        // float d1 = distances[1];
+        // float d2 = distances[2];
+        // float r = map(d0, 0, width / 4, 255, 20) * 2;
+        // float g = map(d1, 0, width / 4, 255, 20) * 2;
+        // float b = map(d2, 0, width / 4, 255, 20) * 2;
+        // pixels[index] = color(r, g, b);
 
         pushMatrix();
-        translate(x, y, z);
-        noStroke();
-        fill(255, b);
-        box(skip);
+          translate(x, y, z);
+          noStroke();
+          // fill(255, b);
+          fill(255);
+          box(skip);
         popMatrix();
       }
     }
@@ -69,7 +72,7 @@ void draw() {
   }
 
   angle += 0.1;
-  //saveFrame("worley/worley####.png");
 
+  //saveFrame("worley/worley####.png");
   //noLoop();
 }

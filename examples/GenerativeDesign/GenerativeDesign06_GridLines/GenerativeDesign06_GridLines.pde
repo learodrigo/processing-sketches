@@ -5,7 +5,7 @@ int actStrokeCap = ROUND;
 int tileS = 45;
 
 void setup () {
-  size(900, 900, P2D);
+  size(600, 600, P2D);
   stroke(255, 100);
   
   tileCount = width / tileS;

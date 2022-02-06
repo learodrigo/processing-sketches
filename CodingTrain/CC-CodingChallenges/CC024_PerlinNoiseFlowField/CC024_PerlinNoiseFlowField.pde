@@ -20,7 +20,7 @@ void setup() {
   for (int i = 0; i < 10000; i++) {
     particles.add(new Particle());
   }
-  
+
   flowFields = new PVector[cols][rows];
 }
 

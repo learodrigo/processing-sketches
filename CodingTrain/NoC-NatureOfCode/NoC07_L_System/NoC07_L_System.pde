@@ -6,6 +6,8 @@ void setup () {
 
 void draw () {
   background(0);
+  
+  theta = mouseX;
 
   // TRUNK
   translate(width * 0.5, height);
@@ -13,9 +15,9 @@ void draw () {
   branch(200, theta);
 }
 
-void mousePressed () {
-  theta = random(PI);
-}
+//void mousePressed () {
+//  theta = random(PI);
+//}
 
 void branch (float len, float a) {  
   float sw = map(abs(len), 1, 120, 1, 10);
