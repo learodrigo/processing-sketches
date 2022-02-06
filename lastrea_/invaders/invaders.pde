@@ -1,18 +1,35 @@
-int n;
+int safeMargin = 20, n = 4;
 float size, x, y;
 
+void keyPressed() {
+  if (key == ' ') {
+  }
+
+  if (key == 's') {
+    saveFrame("invaders-output.jpg");
+  }
+
+  if (key == 'c') {
+    background(0);
+  }
+}
+
+
 void setup () {
-  size(800, 800);
+  size(900, 900);
   noLoop();
   noStroke();
-  n = 4;
-  size = width / (n * 2);
+
+  size = width / (n * 2) - safeMargin;
 }
 
 void draw () {
   background(0);
-  renderInvader();
-  save("invaders-output.jpg");
+
+  pushMatrix();
+    translate(size / 2 + safeMargin, size / 2 + safeMargin);
+    renderInvader();
+  popMatrix();
 }
 
 void renderInvader () {
@@ -34,6 +51,7 @@ void renderInvader () {
 
   x = int(random(0, n));
   y = int(random(0, n));
+
   fill(0, 0, 255);
   rect(x * size, y * size, size, size);
   rect((n * 2 - 1 - x) * size, y * size, size, size);
